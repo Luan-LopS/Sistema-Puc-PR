@@ -3,11 +3,12 @@
 
 print("Seja bem vindo ao sistema PUC-PR")
 
-
+while True:
 # Sistema principal do sistema 
-def main():
-    print("\n-----------SISTEMA PUC-PR--------------")
-    print("____________MENU INICIAL________________")
+    def main():
+        print("\n-----------MENU INICIAL--------------")
+        print("Escolha uma da opções abaixo:" 
+              " ")
 
 
 
@@ -15,4 +16,4 @@ def main():
 
 # Sitema 
 
-main()
+    main()
