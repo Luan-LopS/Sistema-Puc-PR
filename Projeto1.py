@@ -57,6 +57,7 @@ while True:
                 ' 3) Excluir\n'
                 ' 4) Alterar\n'
                 ' 0) Menu inicial\n')
+        
         op = int(input())
         if op == 1:
             print("\n------------INCLUIR-----------")
@@ -71,21 +72,25 @@ while True:
             print("\n------------LIstar-----------")
             while True:
                 if not lista_alunos:
-                    print("Lista vazia")
+                    print("Não há estudantes cadastrados")
                     input("Digite qualquer tecla para continuar...")
                 for list in lista_alunos:
                     print(list)
                     input("Digite qualquer tecla para continuar...")
                 break  
             break  
+
         elif op == 3:
             print("------------Excluir-----------")
             print("EM DESENVOLVIMENTO\n")
+
         elif op == 4:
             print("------------Alterar-----------")
             print("EM DESENVOLVIMENTO\n")
+
         elif op == 0:
             break
+
         else:
             print("Valor Invalido")
             input("Digite qualquer tecla para continuar...")     
