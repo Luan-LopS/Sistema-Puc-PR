@@ -1,13 +1,21 @@
+
 # Projeto sistema de gerenciamento academico 
 #trabalho do semestre 
-
 print("\n\n----------Seja bem vindo ao sistema PUC-PR----------\n")
 
-opcao=1
-while opcao !=0:
-    #main
+lista_alunos=[]
+lista_professor=[]
+lista_disciplinas=[]
+lista_turmas=[]
+lista_matriculas=[]
+
+
+
+
+while True:
+    #menu principal
     print("\n-----------MENU INICIAL--------------")
-    print('Escolha uma da opções abaixo para gerenciar: \n' 
+    print('Escolha uma das opções abaixo para gerenciar: \n' 
             ' 1) Alunos\n'
             ' 2) Professores\n'
             ' 3) Disciplinas\n'
@@ -31,14 +39,19 @@ while opcao !=0:
     elif opcao == 5:
     #Matricula
         print("\n=============Matriculas================")
-    else:
+    elif opcao == 0:
+        print("Sistema finalizado")
         break
-
+    else:
+        print("Valor Invalido")
+        input("Digite qualquer tecla para continuar...")
+        
     
-    op=1
-    while op !=0:
+    
+    #menu de ações
+    while True:
 
-        print('Escolha uma da opções abaixo:\n' 
+        print('Escolha uma das opções abaixo:\n' 
                 ' 1) Incluir\n'
                 ' 2) Listar\n'
                 ' 3) Excluir\n'
@@ -46,16 +59,40 @@ while opcao !=0:
                 ' 0) Menu inicial\n')
         op = int(input())
         if op == 1:
-            print("------------INCLUIR-----------")
-            print("EM DESENVOLVIMENTO\n")
+            print("\n------------INCLUIR-----------")
+            while True:
+                aluno=input("Digite o seu nome: ")
+                lista_alunos.append(aluno)
+                cont=input("\nSe deseja sair digite (S): ").upper()
+                if cont =='S':
+                    break
+                    
         elif op == 2:
-            print("------------LIstar-----------")
-            print("EM DESENVOLVIMENTO\n")
+            print("\n------------LIstar-----------")
+            while True:
+                if not lista_alunos:
+                    print("Lista vazia")
+                    input("Digite qualquer tecla para continuar...")
+                for list in lista_alunos:
+                    print(list)
+                    input("Digite qualquer tecla para continuar...")
+                break  
+            break  
         elif op == 3:
             print("------------Excluir-----------")
             print("EM DESENVOLVIMENTO\n")
         elif op == 4:
             print("------------Alterar-----------")
             print("EM DESENVOLVIMENTO\n")
+        elif op == 0:
+            break
+        else:
+            print("Valor Invalido")
+            input("Digite qualquer tecla para continuar...")     
         
         
+
+        
+               
+            
+
