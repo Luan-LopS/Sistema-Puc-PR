@@ -4,10 +4,6 @@
 print("\n\n----------Seja bem vindo ao sistema PUC-PR----------\n")
 
 lista_alunos=[]
-lista_professor=[]
-lista_disciplinas=[]
-lista_turmas=[]
-lista_matriculas=[]
 
 
 
@@ -30,21 +26,34 @@ while True:
     elif opcao == 2:
     #Professor
         print("\n=============Professores================")
+        print("EM DESENVOLVIMENTO\n")
+        input("Digite qualquer tecla para continuar...") 
+        continue
     elif opcao == 3:
     #Disciplina
         print("\n=============Disciplina================")
+        print("EM DESENVOLVIMENTO\n")
+        input("Digite qualquer tecla para continuar...") 
+        continue
     elif opcao == 4:
     #Turma
         print("\n=============Turmas================")
+        print("EM DESENVOLVIMENTO\n")
+        input("Digite qualquer tecla para continuar...") 
+        continue
     elif opcao == 5:
     #Matricula
         print("\n=============Matriculas================")
+        print("EM DESENVOLVIMENTO\n")
+        input("Digite qualquer tecla para continuar...")
+        continue
     elif opcao == 0:
         print("Sistema finalizado")
         break
     else:
         print("Valor Invalido")
         input("Digite qualquer tecla para continuar...")
+        continue
         
     
     
@@ -64,7 +73,7 @@ while True:
             while True:
                 aluno=input("Digite o seu nome: ")
                 lista_alunos.append(aluno)
-                cont=input("\nSe deseja sair digite (S): ").upper()
+                cont=input("\nSAIR digite (S): ").upper()
                 if cont =='S':
                     break
                     
@@ -72,21 +81,24 @@ while True:
             print("\n------------LIstar-----------")
             while True:
                 if not lista_alunos:
-                    print("Não há estudantes cadastrados")
-                    input("Digite qualquer tecla para continuar...")
+                    print("Não há estudantes cadastrados\n")
                 for list in lista_alunos:
                     print(list)
-                    input("Digite qualquer tecla para continuar...")
+                input("Digite qualquer tecla para continuar...\n")    
                 break  
-            break  
+            continue  
 
         elif op == 3:
             print("------------Excluir-----------")
             print("EM DESENVOLVIMENTO\n")
+            input("Digite qualquer tecla para continuar...")    
+
 
         elif op == 4:
             print("------------Alterar-----------")
             print("EM DESENVOLVIMENTO\n")
+            input("Digite qualquer tecla para continuar...")    
+
 
         elif op == 0:
             break
@@ -94,6 +106,7 @@ while True:
         else:
             print("Valor Invalido")
             input("Digite qualquer tecla para continuar...")     
+            
         
         
 
