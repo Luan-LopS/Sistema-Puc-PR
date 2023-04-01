@@ -3,6 +3,9 @@
 #trabalho do semestre 
 print("\n\n----------Seja bem vindo ao sistema PUC-PR----------\n")
 
+
+
+alunos={}
 lista_alunos=[]
 
 
@@ -71,8 +74,16 @@ while True:
         if op == 1:
             print("\n------------INCLUIR-----------")
             while True:
-                aluno=input("Digite o seu nome: ")
-                lista_alunos.append(aluno)
+                codigo=int(input("Digite o codigo: "))
+                aluno=input("Digite o seu nome: ").strip()
+                cpf=input("Digite seu cpf: ").strip()
+                alunos = {
+                    "nome": aluno,
+                    "codigo": codigo,
+                    "CPF": cpf
+                }
+                
+                lista_alunos.append(alunos)
                 cont=input("\nSAIR digite (S): ").upper()
                 if cont =='S':
                     break
@@ -82,24 +93,46 @@ while True:
             while True:
                 if not lista_alunos:
                     print("Não há estudantes cadastrados\n")
-                for list in lista_alunos:
-                    print(list)
+                                                           
+                print(lista_alunos)
                 input("Digite qualquer tecla para continuar...\n")    
                 break  
             continue  
 
         elif op == 3:
             print("------------Excluir-----------")
-            print("EM DESENVOLVIMENTO\n")
+            while True:
+                if not lista_alunos:
+                    print("Não há estudantes cadastrados\n")
+                    break
+                cod=int(input("Qual o codigo do aluno que deseja excluir?"))
+                for i in range(len(lista_alunos)):
+                    if cod in lista_alunos[i].values():
+                        lista_alunos.pop(i)    
+                        print(f'{i} removido do dicionário {lista_alunos}')
+
+                        break
+                break  
             input("Digite qualquer tecla para continuar...")    
 
 
         elif op == 4:
             print("------------Alterar-----------")
-            print("EM DESENVOLVIMENTO\n")
+            while True:
+                if not lista_alunos:
+                    print("Não há estudantes cadastrados\n")
+                    break
+                alterar =int(input("Digite o codigo: "))
+
+                for alt in lista_alunos:
+                    if alt['codigo'] == alterar:
+                        alt['nome'] =input("Digite o seu nome: ").strip()
+                        alt['cpf'] =input("Digite seu cpf: ").strip()
+                        break
+                    print(lista_alunos)
+                break  
             input("Digite qualquer tecla para continuar...")    
-
-
+          
         elif op == 0:
             break
 
