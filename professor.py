@@ -1,11 +1,16 @@
-import json
+from tratamento_de_erro import Erros
+erro=Erros()
+
 
 class Dado_professor:
    
     def __init__(self):
-        self.codigo = int(input("Digite o codigo do professor: ")) 
-        self.nome = input("digite o nome: ")
-        self.cpf = input("digite o cpf:")
+        print("Digite o codigo do professor: ")
+        self.codigo = erro.entrada_numeral()
+        print("digite o nome: ")
+        self.nome = erro.entrada_string()
+        print("digite o cpf: ")
+        self.cpf = erro.entrada_string()
 
     def dicionario(self):
         dic={
