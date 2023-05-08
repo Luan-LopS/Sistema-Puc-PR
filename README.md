@@ -1,4 +1,8 @@
+<img src="https://aristo.com.br/wp-content/uploads/2022/11/fachada-puc-pr-1920x1024-1.jpg" alt="">
+
+
 <h1> Sistema-Puc-PR</h1>
+
 
 <h3> Projeto realizado de trabalho semestral da material de raciocinio computacional da faculdade PUC-PR: <br>
 Desenvolvimento de sistema de gerenciamento academico com as seguintes funcionalidades:</h3>
